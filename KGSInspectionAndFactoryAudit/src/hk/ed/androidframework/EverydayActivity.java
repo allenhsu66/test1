@@ -15,7 +15,7 @@ public class EverydayActivity extends Activity {
 	// intent.putExtra(SAMPLE_NAME, params);
 	// from.startActivity(intent);
 	// }
-
+//
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
