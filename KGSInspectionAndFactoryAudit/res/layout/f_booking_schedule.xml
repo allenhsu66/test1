@@ -1,0 +1,2455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="365"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/llCalendar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#25aae1" >
+
+                <TextView
+                    android:id="@+id/tvCurrentMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingLeft="20dp"
+                    android:text="TextView"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnPreviousMonth"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/schedule_arrow_back" />
+
+                <ImageButton
+                    android:id="@+id/btnNextMonth"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/schedule_arrow_next" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#aaa"
+                android:padding="1px" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Sun"
+                    android:textColor="#555"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Mon"
+                    android:textColor="#555"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Tue"
+                    android:textColor="#555"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Wed"
+                    android:textColor="#555"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Thu"
+                    android:textColor="#555"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Fri"
+                    android:textColor="#555"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Sat"
+                    android:textColor="#555"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWeeks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#aaa"
+                    android:orientation="horizontal"
+                    android:paddingBottom="1px"
+                    android:paddingLeft="1px"
+                    android:paddingRight="1px" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#aaa"
+                    android:orientation="horizontal"
+                    android:paddingBottom="1px"
+                    android:paddingLeft="1px"
+                    android:paddingRight="1px" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#aaa"
+                    android:orientation="horizontal"
+                    android:paddingBottom="1px"
+                    android:paddingLeft="1px"
+                    android:paddingRight="1px" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#aaa"
+                    android:orientation="horizontal"
+                    android:paddingBottom="1px"
+                    android:paddingLeft="1px"
+                    android:paddingRight="1px" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#aaa"
+                    android:orientation="horizontal"
+                    android:paddingBottom="1px"
+                    android:paddingLeft="1px"
+                    android:paddingRight="1px" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#aaa"
+                    android:orientation="horizontal"
+                    android:paddingBottom="1px"
+                    android:paddingLeft="1px"
+                    android:paddingRight="1px" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1px"
+                        android:layout_weight="1"
+                        android:background="#fff" >
+
+                        <CheckedTextView
+                            android:id="@+id/tvDateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_black_grey_bg"
+                            android:textColor="@color/selector_tab_text_color"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvFaNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvTaskSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/tvFaNumber"
+                            android:layout_below="@id/tvFaNumber"
+                            android:layout_marginTop="1dp"
+                            android:background="#25aae1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:paddingTop="1dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <CheckedTextView
+                    android:id="@+id/btnMyBooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/selector_green_grey_bg"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="My\nBooking"
+                    android:textColor="#fff" />
+
+                <CheckedTextView
+                    android:id="@+id/btnTeamBooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_green_grey_bg"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="Team\nBooking"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnFromFilter"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableLeft="@drawable/date_picker"
+                    android:gravity="left|center_vertical"
+                    android:text="From"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/btnToFilter"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableLeft="@drawable/date_picker"
+                    android:gravity="left|center_vertical"
+                    android:text="To"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                tools:listitem="@layout/header_spinner" />
+
+            <Spinner
+                android:id="@+id/spBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                tools:listitem="@layout/header_spinner" />
+
+            <Spinner
+                android:id="@+id/spSupplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                tools:listitem="@layout/header_spinner" />
+
+            <EditText
+                android:id="@+id/etPurchaseOrderWildcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#fff"
+                android:hint="Purchase Order Whildcard"
+                android:lines="1"
+                android:textSize="18dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/etStyleNumberWildCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#fff"
+                android:hint="Style Number Wildcard"
+                android:lines="1"
+                android:textSize="18dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textColor="#000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="334"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#aaa"
+            android:orientation="horizontal"
+            android:padding="1px" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:background="#25aae1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Type"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="125"
+                android:background="#25aae1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Factory"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="113"
+                android:background="#25aae1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Brand"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="129"
+                android:background="#25aae1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Supplier"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="79"
+                android:background="#25aae1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="PO"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="75"
+                android:background="#25aae1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Style"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="127"
+                android:background="#25aae1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="QC"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="58"
+                android:background="#25aae1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Insp."
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="61"
+                android:background="#25aae1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Book."
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvScheduledTask"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="#aaa"
+            android:dividerHeight="1px"
+            tools:listitem="@layout/i_scheduled_task" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp" >
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:text="Final Inspection"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvSubtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apparel"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvQcName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QC name"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvBookingId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking ID"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvInspectionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inspection Date"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvBookingDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking Date"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvFactory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Factory"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brand"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvSupplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Supplier"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvPoNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PO Number"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvShiplineNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipline Number"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvShiplineQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipline Quantity"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvShipMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ship Mode"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvStyleNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Style Number"
+                android:textColor="#000"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvForms"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#3aaa"
+            android:clipToPadding="false"
+            android:divider="#0000"
+            android:dividerHeight="10dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            tools:listitem="@layout/i_report_form_status" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="20dp" >
+
+	    <Button
+	        android:id="@+id/btnClose"
+	        android:layout_width="150dp"
+	        android:layout_height="35dp"
+	        android:layout_gravity="center_horizontal"
+	        android:background="#39b54a"
+	        android:text="Close"
+	        android:textColor="#fff"
+	        android:layout_marginRight="50dp"
+	        android:textSize="20dp" />
+	    <Button
+	        android:id="@+id/btnSaveToWork"
+	        android:layout_width="150dp"
+	        android:layout_height="35dp"
+	        android:layout_gravity="center_horizontal"
+	        android:background="#39b54a"
+	        android:text="Save to Work"
+	        android:textColor="#fff"
+	        android:textSize="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

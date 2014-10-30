@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3aaa"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnFromFilter"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:drawableLeft="@drawable/date_picker"
+                android:gravity="left|center_vertical"
+                android:text="From"
+                android:textColor="#000" />
+
+            <Button
+                android:id="@+id/btnToFilter"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:drawableLeft="@drawable/date_picker"
+                android:gravity="left|center_vertical"
+                android:text="To"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            tools:listitem="@layout/header_spinner" />
+
+        <Spinner
+            android:id="@+id/spBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            tools:listitem="@layout/header_spinner" />
+
+        <Spinner
+            android:id="@+id/spSupplier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            tools:listitem="@layout/header_spinner" />
+
+        <EditText
+            android:id="@+id/etPurchaseOrderWildcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#fff"
+            android:hint="Purchase Order Whildcard"
+            android:lines="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/etStyleNumberWildCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#fff"
+            android:hint="Style Number Wildcard"
+            android:lines="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#aaa"
+        android:padding="1px"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1px"
+            android:layout_weight="59"
+            android:background="#58585a"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Type"
+            android:textColor="#fff"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1px"
+            android:layout_weight="125"
+            android:background="#58585a"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Factory"
+            android:textColor="#fff"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1px"
+            android:layout_weight="114"
+            android:background="#58585a"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Brand"
+            android:textColor="#fff"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1px"
+            android:layout_weight="108"
+            android:background="#58585a"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Supplier"
+            android:textColor="#fff"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1px"
+            android:layout_weight="79"
+            android:background="#58585a"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="PO"
+            android:textColor="#fff"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1px"
+            android:layout_weight="73"
+            android:background="#58585a"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Style"
+            android:textColor="#fff"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1px"
+            android:layout_weight="59"
+            android:background="#58585a"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Insp."
+            android:textColor="#fff"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1px"
+            android:layout_weight="63"
+            android:background="#58585a"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Book."
+            android:textColor="#fff"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:background="#58585a"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Status"
+            android:textColor="#fff"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvReports"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#aaa"
+        android:dividerHeight="1px"
+        tools:listitem="@layout/i_report_with_status" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvFormName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Form Name"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal" >
+
+        <hk.ed.android.library.ui.DontPressWithParentCheckedTextView
+            android:id="@+id/ctvNew"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector_status_new_bg"
+            android:gravity="center"
+            android:text="New"
+            android:textColor="#fff"
+            android:duplicateParentState="false"
+            android:textSize="17dp" />
+
+        <hk.ed.android.library.ui.DontPressWithParentCheckedTextView
+            android:id="@+id/ctvDraft"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector_status_draft_bg"
+            android:gravity="center"
+            android:text="Draft"
+            android:textColor="#fff"
+            android:duplicateParentState="false"
+            android:textSize="17dp" />
+
+        <hk.ed.android.library.ui.DontPressWithParentCheckedTextView
+            android:id="@+id/ctvDone"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/selector_status_done_bg"
+            android:gravity="center"
+            android:text="Done"
+            android:textColor="#fff"
+            android:duplicateParentState="false"
+            android:textSize="17dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

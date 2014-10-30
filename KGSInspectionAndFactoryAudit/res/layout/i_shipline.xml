@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#aaa"
+    android:paddingLeft="1px"
+    android:paddingRight="1px"
+    android:paddingBottom="1px" >
+
+    <TextView
+        android:id="@+id/tvBookDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="101"
+        android:layout_marginRight="1px"
+        android:background="#fff"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="Book Date"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tvPo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="92"
+        android:layout_marginRight="1px"
+        android:background="#fff"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="PO"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tvStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="87"
+        android:layout_marginRight="1px"
+        android:background="#fff"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="Style"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tvShipId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="68"
+        android:layout_marginRight="1px"
+        android:background="#fff"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="Ship ID"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tvQuantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="52"
+        android:layout_marginRight="1px"
+        android:background="#fff"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="Qty."
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tvMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="57"
+        android:layout_marginRight="1px"
+        android:background="#fff"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="Mode"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tvShipDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="82"
+        android:background="#fff"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="Ship Date"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+</LinearLayout>

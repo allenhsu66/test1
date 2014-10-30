@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="30dp" >
+
+    <TextView
+        android:id="@+id/tvCheckingForUpdates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checking for Updates" />
+
+    <TextView
+        android:id="@+id/tvDownloadingUpdates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Downloading Updates (0 of 15)"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvDonwloadCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download Completed"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="#39b54a"
+        android:text="Close"
+        android:textColor="#fff"
+        android:visibility="gone" />
+
+</LinearLayout>

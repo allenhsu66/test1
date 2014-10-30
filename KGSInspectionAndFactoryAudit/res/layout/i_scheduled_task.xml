@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaa"
+    android:orientation="horizontal"
+    android:paddingLeft="1px"
+    android:paddingRight="1px"
+    android:paddingBottom="1px" >
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="60"
+        android:background="#fff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Type"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#aaa" />
+
+    <TextView
+        android:id="@+id/tvFactory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="125"
+        android:background="#fff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Factory"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#aaa" />
+
+    <TextView
+        android:id="@+id/tvBrand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="113"
+        android:background="#fff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Brand"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#aaa" />
+
+    <TextView
+        android:id="@+id/tvSupplier"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="129"
+        android:background="#fff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Supplier"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#aaa" />
+
+    <TextView
+        android:id="@+id/tvPO"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="79"
+        android:background="#fff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="PO"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#aaa" />
+
+    <TextView
+        android:id="@+id/tvStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="75"
+        android:background="#fff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Style"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#aaa" />
+
+    <TextView
+        android:id="@+id/tvQC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="127"
+        android:background="#fff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="QC"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#aaa" />
+
+    <TextView
+        android:id="@+id/tvInsp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="58"
+        android:background="#fff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Insp."
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#aaa" />
+
+    <TextView
+        android:id="@+id/tvBook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="61"
+        android:background="#fff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Book."
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+</LinearLayout>

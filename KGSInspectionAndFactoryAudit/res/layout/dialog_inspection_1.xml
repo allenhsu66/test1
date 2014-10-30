@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="1200dp"
+    android:minHeight="700dp"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:text="Final Inspection"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_weight="531"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvSubtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apparel"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvQcName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QC name"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvBookingId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking ID"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvInspectionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inspection Date"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvBookingDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking Date"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Booking / Ship Lines"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_bg_black_rect"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/lvShiplines"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:clipToPadding="false"
+                    android:divider="#0000"
+                    android:dividerHeight="5dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    tools:listitem="@layout/i_shipline_summary" >
+                </ListView>
+
+                <ImageButton
+                    android:id="@+id/btnAddShipline"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@null"
+                    android:src="@drawable/add_new_btn" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvForms"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="277"
+            android:background="#3aaa"
+            android:clipToPadding="false"
+            android:divider="#0000"
+            android:dividerHeight="10dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            tools:listitem="@layout/i_report_form_status" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+        
+        <Button
+	        android:id="@+id/btnDelete"
+	        android:layout_width="150dp"
+	        android:layout_height="35dp"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginRight="50dp"
+	        android:background="#bf1e2d"
+	        android:text="Delete"
+	        android:textColor="#fff"
+	        android:textSize="20dp" />
+	    <Button
+	        android:id="@+id/btnClose"
+	        android:layout_width="150dp"
+	        android:layout_height="35dp"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginTop="20dp"
+	        android:background="#39b54a"
+	        android:text="Close"
+	        android:textColor="#fff"
+	        android:textSize="20dp" />
+        
+    </LinearLayout>
+
+
+</LinearLayout>

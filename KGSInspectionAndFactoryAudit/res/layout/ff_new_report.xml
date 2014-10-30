@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:gravity="center"
+                android:text="Final\nInspection"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="Inline\nInspection"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:text="Sample\nCheck"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:text="Factory\nAudit"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <Button
+                android:id="@+id/btnFinalInspectionFootwear"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Footwear" />
+
+            <Button
+                android:id="@+id/btnInlineInspectionFootwear"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Footwear" />
+
+            <Button
+                android:id="@+id/btnSampleCheckFootwear"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Footwear" />
+
+            <Button
+                android:id="@+id/btnFactoryAuditFootwear"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Footwear" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <Button
+                android:id="@+id/btnFinalInspectionApparel"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Apparel" />
+
+            <Button
+                android:id="@+id/btnInlineInspectionApparel"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Apparel" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="1dp" />
+
+            <Button
+                android:id="@+id/btnFactoryAuditApparel"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Apparel" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <Button
+                android:id="@+id/btnFinalInspectionFurnitureAndHardgoods"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Furniture &#38; Hardgoods" />
+
+            <Button
+                android:id="@+id/btnInlineInspectionFurnitureAndHardgoods"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Furniture &#38; Hardgoods" />
+
+            <Button
+                android:id="@+id/btnSampleCheckFurnitureAndHardgoods"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Furniture &#38; Hardgoods" />
+
+            <Button
+                android:id="@+id/btnFactoryAuditFurnitureAndHardgoods"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/selector_black_blue_bg"
+                android:text="Furniture &#38; Hardgoods" />
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
